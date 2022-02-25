@@ -1,4 +1,4 @@
-module loteria
+module lottery-bot
 
 go 1.17
 
