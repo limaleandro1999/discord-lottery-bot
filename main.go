@@ -27,7 +27,9 @@ func main() {
 	}
 
 	discord.AddHandler(replyMessage)
-	discord.Identify.Intents = discordgo.IntentsGuildMessages
+	discord.Identify.Intents = discordgo.IntentsDirectMessages
+
+	fmt.Println("Bot is starting.")
 
 	err = discord.Open()
 	if err != nil {
