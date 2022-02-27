@@ -1,1 +1,1 @@
-worker: ./lottery-bot
+worker: bin/lottery-bot
