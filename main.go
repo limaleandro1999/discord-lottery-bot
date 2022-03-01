@@ -23,13 +23,14 @@ func main() {
 		log.Fatal("Error loading .env file")
 	}
 
-	discord, err := discordgo.New(fmt.Sprintf("Bot %s", os.Getenv("DISCORD_BOT_TOKEN")))
+	discordToken := os.Getenv("DISCORD_BOT_TOKEN")
+	discord, err := discordgo.New(fmt.Sprintf("Bot %s", discordToken))
 	if err != nil {
 		log.Fatal(err)
 	}
 
 	discord.AddHandler(replyMessage)
-	discord.Identify.Intents = discordgo.IntentsDirectMessages
+	discord.Identify.Intents = discordgo.IntentsGuildMessages
 
 	fmt.Println("Bot is starting.")
 
