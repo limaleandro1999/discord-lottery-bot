@@ -50,6 +50,7 @@ func main() {
 
 func replyMessage(s *discordgo.Session, m *discordgo.MessageCreate) {
 	if strings.Contains(m.Content, "/resultado") {
+		fmt.Println(fmt.Sprintf(`Received message: %s`, m.Content))
 		messageWords := strings.Split(m.Content, " ")
 
 		if len(messageWords) != 3 {
