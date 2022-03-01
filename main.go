@@ -45,7 +45,9 @@ func main() {
 	<-sc
 
 	// Cleanly close down the Discord session.
+	fmt.Println("Disconnecting...")
 	discord.Close()
+	fmt.Println("Disconnected...")
 }
 
 func replyMessage(s *discordgo.Session, m *discordgo.MessageCreate) {
