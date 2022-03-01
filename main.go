@@ -17,7 +17,9 @@ import (
 
 func main() {
 	err := godotenv.Load()
-	if err != nil {
+	env := os.Getenv("BOT_ENV")
+
+	if err != nil && env == "dev" {
 		log.Fatal("Error loading .env file")
 	}
 
