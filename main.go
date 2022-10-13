@@ -73,7 +73,7 @@ func replyMessage(s *discordgo.Session, m *discordgo.MessageCreate) {
 		if !ok {
 			s.ChannelMessageSendReply(
 				m.ChannelID,
-				`Meu joia, o jogo informado é inválido. Valores de jogos possíveis: megasena, quina, lotofacil, duplasena, timemania`,
+				`Minha joia, o jogo informado é inválido. Valores de jogos possíveis: megasena, quina, lotofacil, duplasena, timemania`,
 				m.MessageReference,
 			)
 			return
